@@ -6,7 +6,7 @@
           <el-menu-item index="1">首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title">内容管理</template>
-            <el-menu-item index="2-1">文章管理</el-menu-item>
+            <el-menu-item index="2-1" v-on:click="showArticle">文章管理</el-menu-item>
             <el-menu-item index="2-2">今日事</el-menu-item>
             <el-menu-item index="2-3">其他</el-menu-item>
           </el-submenu>
@@ -15,7 +15,9 @@
       </el-header>
 
 
-      <el-main>Main</el-main>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </div>
 </template>
@@ -24,13 +26,16 @@
   export default {
     data() {
       return {
-        activeIndex: '1',
-        activeIndex2: '1'
+        activeIndex: '1'
       };
     },
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+      },
+      showArticle(){
+          var me = this;
+          me.$router.push("/managehome/article");
       }
     }
   }
@@ -49,6 +54,7 @@
     /*background-color: antiquewhite;*/
   }
   .el-main{
-    background-color: aquamarine;
+    padding: 10px;
+    background-color: #fff;
   }
 </style>
