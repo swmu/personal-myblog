@@ -3,6 +3,7 @@
     <script id="editor" type="text/plain"></script>
   </div>
 </template>
+
 <script>
   export default {
     name: 'UE',
@@ -38,8 +39,8 @@
 </script>
 
 <style>
-.ueditor-contain{
-  text-align: left;
-  line-height: 0px;
-}
+  .ueditor-contain{
+    text-align: left;
+    line-height: 0px;
+  }
 </style>

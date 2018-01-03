@@ -44,5 +44,16 @@ export default{
     width:100%;
     height:100%;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  .el-container{
+    flex:1;
+  }
+  .el-main{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
   }
 </style>

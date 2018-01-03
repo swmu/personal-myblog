@@ -7,7 +7,7 @@ import manageHome from '@/views/manage/manage-home.vue'
 // article
 import article from '@/views/manage/article/article.vue'
 import articleEdit from '@/views/manage/article/article-edit.vue'
-import articleShow from '@/views/manage/article/article-show.vue'
+import articleShow from '@/views/manage/article/article-show1.vue'
 // show page
 import home from '@/views/show/home.vue'
 
