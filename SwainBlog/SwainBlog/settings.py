@@ -61,7 +61,8 @@ ROOT_URLCONF = 'SwainBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['frontend/dist'],
+        # 'DIRS': ['frontend/dist'],
+        'DIRS': ['frontend_template/static'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,10 +129,16 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "frontend/dist/static"),
+# ]
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "frontend/dist/static"),
+    os.path.join(BASE_DIR, "frontend_template/static"),
 ]
+
 
 # 设置文件上传路径  url中还有设置
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
